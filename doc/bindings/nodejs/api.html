@@ -273,20 +273,20 @@ For existing collections <cite>copts</cite> takes no effect.</p>
 <p>Execution of this function will be <cite>asynchronous</cite> if <cite>cb</cite> is
 provided, otherwise it will executed in <cite>synchronous</cite> mode.</p>
 <p><cite>copts</cite>:</p>
-<div class="highlight-js"><div class="highlight"><pre>{
-  //Max number of cached records in shared memory segment. Default: 0
-  &#39;cachedrecords&#39;: number,
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="c1">//Max number of cached records in shared memory segment. Default: 0</span>
+  <span class="s1">&#39;cachedrecords&#39;</span><span class="o">:</span> <span class="nx">number</span><span class="p">,</span>
 
-  //Estimated number of records in this collection. Default: 65535.
-  &#39;records&#39;: number,
+  <span class="c1">//Estimated number of records in this collection. Default: 65535.</span>
+  <span class="s1">&#39;records&#39;</span><span class="o">:</span> <span class="nx">number</span><span class="p">,</span>
 
-   //If `true` the size of a database can be larger than 2GB. Default: false
-  &#39;large&#39;: false,
+   <span class="c1">//If `true` the size of a database can be larger than 2GB. Default: false</span>
+  <span class="s1">&#39;large&#39;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
 
-  //If `true` collection&#39;s records will be compressed
-  // with DEFLATE compression. Default: false
-  &#39;compressed: false
-}
+  <span class="c1">//If `true` collection&#39;s records will be compressed</span>
+  <span class="c1">// with DEFLATE compression. Default: false</span>
+  <span class="s1">&#39;compressed&#39;</span><span class="o">:</span> <span class="kc">false</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 <table class="docutils field-list" frame="void" rules="none">
@@ -335,7 +335,7 @@ To identify and update object it should contains the <cite>_id</cite> property.<
 <p>Execution of this function will be <cite>asynchronous</cite> if <cite>cb</cite> is
 provided, otherwise it will be executed in <cite>synchronous</cite> mode.</p>
 <p>A save options <cite>opts</cite>:</p>
-<div class="highlight-js"><div class="highlight"><pre><span class="p">{</span>
+<div class="highlight-js"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="c1">//A saved object will be merged with who&#39;s</span>
     <span class="c1">// already persisted in db.</span>
     <span class="nx">merge</span><span class="o">:</span> <span class="kc">false</span>
@@ -343,10 +343,10 @@ provided, otherwise it will be executed in <cite>synchronous</cite> mode.</p>
 </pre></div>
 </div>
 <p><strong>Calling variations:</strong></p>
-<div class="highlight-js"><div class="highlight"><pre><span class="nx">save</span><span class="p">(</span><span class="nx">cname</span><span class="p">,</span> <span class="o">&lt;</span><span class="nx">json</span> <span class="nx">object</span><span class="o">&gt;|&lt;</span><span class="nb">Array</span> <span class="nx">of</span> <span class="nx">json</span> <span class="nx">objects</span><span class="o">&gt;</span><span class="p">)</span>
-<span class="nx">save</span><span class="p">(</span><span class="nx">cname</span><span class="p">,</span> <span class="o">&lt;</span><span class="nx">json</span> <span class="nx">object</span><span class="o">&gt;|&lt;</span><span class="nb">Array</span> <span class="nx">of</span> <span class="nx">json</span> <span class="nx">objects</span><span class="o">&gt;</span><span class="p">,</span> <span class="nx">options</span><span class="p">)</span>
-<span class="nx">save</span><span class="p">(</span><span class="nx">cname</span><span class="p">,</span> <span class="o">&lt;</span><span class="nx">json</span> <span class="nx">object</span><span class="o">&gt;|&lt;</span><span class="nb">Array</span> <span class="nx">of</span> <span class="nx">json</span> <span class="nx">objects</span><span class="o">&gt;</span><span class="p">,</span> <span class="nx">cb</span><span class="p">)</span>
-<span class="nx">save</span><span class="p">(</span><span class="nx">cname</span><span class="p">,</span> <span class="o">&lt;</span><span class="nx">json</span> <span class="nx">object</span><span class="o">&gt;|&lt;</span><span class="nb">Array</span> <span class="nx">of</span> <span class="nx">json</span> <span class="nx">objects</span><span class="o">&gt;</span><span class="p">,</span> <span class="nx">options</span><span class="p">,</span> <span class="nx">cb</span><span class="p">)</span>
+<div class="highlight-js"><div class="highlight"><pre><span></span><span class="nx">save</span><span class="p">(</span><span class="nx">cname</span><span class="p">,</span> <span class="o">&lt;</span><span class="nx">json</span> <span class="nx">object</span><span class="o">&gt;|&lt;</span><span class="nb">Array</span> <span class="k">of</span> <span class="nx">json</span> <span class="nx">objects</span><span class="o">&gt;</span><span class="p">)</span>
+<span class="nx">save</span><span class="p">(</span><span class="nx">cname</span><span class="p">,</span> <span class="o">&lt;</span><span class="nx">json</span> <span class="nx">object</span><span class="o">&gt;|&lt;</span><span class="nb">Array</span> <span class="k">of</span> <span class="nx">json</span> <span class="nx">objects</span><span class="o">&gt;</span><span class="p">,</span> <span class="nx">options</span><span class="p">)</span>
+<span class="nx">save</span><span class="p">(</span><span class="nx">cname</span><span class="p">,</span> <span class="o">&lt;</span><span class="nx">json</span> <span class="nx">object</span><span class="o">&gt;|&lt;</span><span class="nb">Array</span> <span class="k">of</span> <span class="nx">json</span> <span class="nx">objects</span><span class="o">&gt;</span><span class="p">,</span> <span class="nx">cb</span><span class="p">)</span>
+<span class="nx">save</span><span class="p">(</span><span class="nx">cname</span><span class="p">,</span> <span class="o">&lt;</span><span class="nx">json</span> <span class="nx">object</span><span class="o">&gt;|&lt;</span><span class="nb">Array</span> <span class="k">of</span> <span class="nx">json</span> <span class="nx">objects</span><span class="o">&gt;</span><span class="p">,</span> <span class="nx">options</span><span class="p">,</span> <span class="nx">cb</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="admonition note">
@@ -425,7 +425,7 @@ provided, otherwise it will be executed in <cite>synchronous</cite> mode.</p>
 <dt id="db.find">
 <code class="descclassname">db.</code><code class="descname">find</code><span class="sig-paren">(</span><em>cname</em>, <em>...</em><span class="sig-paren">)</span><a class="headerlink" href="#db.find" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieve a set of documents matched to the specified query.
-<a class="reference internal" href="../../ql/ql.html#ql"><span>See the complete query language specification</span></a></p>
+<a class="reference internal" href="../../ql/ql.html#ql"><span class="std std-ref">See the complete query language specification</span></a></p>
 <p>Execution of this function will be <cite>asynchronous</cite> if <cite>cb</cite> is
 provided, otherwise it will be executed in <cite>synchronous</cite> mode.</p>
 <p>A callback function <cite>cb</cite> will be called with
@@ -436,7 +436,7 @@ the following arguments: <cite>error, cursor, count</cite> where:</p>
 <li>count: Total number of matched documents.</li>
 </ul>
 <p><strong>Calling variations:</strong></p>
-<div class="highlight-js"><div class="highlight"><pre><span class="nx">find</span><span class="p">(</span><span class="nx">cname</span><span class="p">,</span> <span class="p">[</span><span class="nx">cb</span><span class="p">])</span>
+<div class="highlight-js"><div class="highlight"><pre><span></span><span class="nx">find</span><span class="p">(</span><span class="nx">cname</span><span class="p">,</span> <span class="p">[</span><span class="nx">cb</span><span class="p">])</span>
 <span class="nx">find</span><span class="p">(</span><span class="nx">cname</span><span class="p">,</span> <span class="nx">qobj</span><span class="p">,</span> <span class="p">[</span><span class="nx">cb</span><span class="p">])</span>
 <span class="nx">find</span><span class="p">(</span><span class="nx">cname</span><span class="p">,</span> <span class="nx">qobj</span><span class="p">,</span> <span class="nx">hints</span><span class="p">,</span> <span class="p">[</span><span class="nx">cb</span><span class="p">])</span>
 <span class="nx">find</span><span class="p">(</span><span class="nx">cname</span><span class="p">,</span> <span class="nx">qobj</span><span class="p">,</span> <span class="nx">qobjarr</span><span class="p">,</span> <span class="p">[</span><span class="nx">cb</span><span class="p">])</span>
@@ -450,7 +450,7 @@ the following arguments: <cite>error, cursor, count</cite> where:</p>
 <tr class="field-odd field"><th class="field-name">Arguments:</th><td class="field-body"><ul class="first simple">
 <li><strong>cname</strong> (<em>string</em>) &#8211; Collection name</li>
 <li><strong>[qobj]</strong> (<em>object</em>) &#8211; Main JSON query object</li>
-<li><strong>[hints]</strong> (<em>object</em>) &#8211; JSON object specifies the query <a class="reference internal" href="../../ql/ql.html#qhints"><span>hints</span></a></li>
+<li><strong>[hints]</strong> (<em>object</em>) &#8211; JSON object specifies the query <a class="reference internal" href="../../ql/ql.html#qhints"><span class="std std-ref">hints</span></a></li>
 <li><strong>[qobjarr]</strong> (<em>array</em>) &#8211; Array of extra <cite>OR</cite> joined query objects</li>
 <li><strong>[cb]</strong> (<em>function</em>) &#8211; Callback accepting arguments: <cite>error, cursor, count</cite></li>
 </ul>
@@ -469,7 +469,7 @@ If <cite>cb</cite> is not provided and no <cite>$onlycount</cite> query hint ret
 <dt id="db.findOne">
 <code class="descclassname">db.</code><code class="descname">findOne</code><span class="sig-paren">(</span><em>cname</em>, <em>...</em><span class="sig-paren">)</span><a class="headerlink" href="#db.findOne" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieve a first found document matched to the specified query.
-<a class="reference internal" href="../../ql/ql.html#ql"><span>See the complete query language specification</span></a></p>
+<a class="reference internal" href="../../ql/ql.html#ql"><span class="std std-ref">See the complete query language specification</span></a></p>
 <p>Execution of this function will be <cite>asynchronous</cite> if <cite>cb</cite> is
 provided, otherwise it will be executed in <cite>synchronous</cite> mode.</p>
 <p>A callback function <cite>cb</cite> will be called with
@@ -479,7 +479,7 @@ the following arguments: <cite>error, object</cite> where:</p>
 <li>document: Found document or <cite>null</cite> if no matched documents.</li>
 </ul>
 <p><strong>Calling variations:</strong></p>
-<div class="highlight-js"><div class="highlight"><pre><span class="nx">findOne</span><span class="p">(</span><span class="nx">cname</span><span class="p">,</span> <span class="p">[</span><span class="nx">cb</span><span class="p">])</span>
+<div class="highlight-js"><div class="highlight"><pre><span></span><span class="nx">findOne</span><span class="p">(</span><span class="nx">cname</span><span class="p">,</span> <span class="p">[</span><span class="nx">cb</span><span class="p">])</span>
 <span class="nx">findOne</span><span class="p">(</span><span class="nx">cname</span><span class="p">,</span> <span class="nx">qobj</span><span class="p">,</span> <span class="p">[</span><span class="nx">cb</span><span class="p">])</span>
 <span class="nx">findOne</span><span class="p">(</span><span class="nx">cname</span><span class="p">,</span> <span class="nx">qobj</span><span class="p">,</span> <span class="nx">hints</span><span class="p">,</span> <span class="p">[</span><span class="nx">cb</span><span class="p">])</span>
 <span class="nx">findOne</span><span class="p">(</span><span class="nx">cname</span><span class="p">,</span> <span class="nx">qobj</span><span class="p">,</span> <span class="nx">qobjarr</span><span class="p">,</span> <span class="p">[</span><span class="nx">cb</span><span class="p">])</span>
@@ -493,7 +493,7 @@ the following arguments: <cite>error, object</cite> where:</p>
 <tr class="field-odd field"><th class="field-name">Arguments:</th><td class="field-body"><ul class="first simple">
 <li><strong>cname</strong> (<em>string</em>) &#8211; Collection name</li>
 <li><strong>[qobj]</strong> (<em>object</em>) &#8211; Main JSON query object</li>
-<li><strong>[hints]</strong> (<em>object</em>) &#8211; JSON object specifies the query <a class="reference internal" href="../../ql/ql.html#qhints"><span>hints</span></a></li>
+<li><strong>[hints]</strong> (<em>object</em>) &#8211; JSON object specifies the query <a class="reference internal" href="../../ql/ql.html#qhints"><span class="std std-ref">hints</span></a></li>
 <li><strong>[qobjarr]</strong> (<em>array</em>) &#8211; Array of extra <cite>OR</cite> joined query objects</li>
 <li><strong>[cb]</strong> (<em>function</em>) &#8211; Callback accepting arguments: <cite>error, document</cite></li>
 </ul>
@@ -512,14 +512,14 @@ if no documents found.</p>
 <dt id="db.command">
 <code class="descclassname">db.</code><code class="descname">command</code><span class="sig-paren">(</span><em>cmd</em><span class="optional">[</span>, <em>cb</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#db.command" title="Permalink to this definition">¶</a></dt>
 <dd><p>Execute ejdb database command.
-<a class="reference internal" href="../../iexp/index.html#cmd"><span>See the database commands documentation</span></a></p>
+<a class="reference internal" href="../../iexp/index.html#cmd"><span class="std std-ref">See the database commands documentation</span></a></p>
 <p>Execution of this function will be <cite>asynchronous</cite> if <cite>cb</cite> is
 provided, otherwise it will be executed in <cite>synchronous</cite> mode.</p>
 <p>A callback function <cite>cb</cite> will be called with
 the following arguments: <cite>error, object</cite> where:</p>
 <ul class="simple">
 <li>error: Error object</li>
-<li>response: JSON object: <a class="reference internal" href="../../iexp/index.html#cmd-response"><span>command execution response</span></a>.</li>
+<li>response: JSON object: <a class="reference internal" href="../../iexp/index.html#cmd-response"><span class="std std-ref">command execution response</span></a>.</li>
 </ul>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -548,7 +548,7 @@ the following arguments: <cite>error, count</cite> where:</p>
 <li>count: Number of documents updated.</li>
 </ul>
 <p><strong>Calling variations:</strong></p>
-<div class="highlight-js"><div class="highlight"><pre><span class="nx">update</span><span class="p">(</span><span class="nx">cname</span><span class="p">,</span> <span class="nx">qobj</span><span class="p">,</span> <span class="p">[</span><span class="nx">cb</span><span class="p">])</span>
+<div class="highlight-js"><div class="highlight"><pre><span></span><span class="nx">update</span><span class="p">(</span><span class="nx">cname</span><span class="p">,</span> <span class="nx">qobj</span><span class="p">,</span> <span class="p">[</span><span class="nx">cb</span><span class="p">])</span>
 <span class="nx">update</span><span class="p">(</span><span class="nx">cname</span><span class="p">,</span> <span class="nx">qobj</span><span class="p">,</span> <span class="nx">hints</span><span class="p">,</span> <span class="p">[</span><span class="nx">cb</span><span class="p">])</span>
 <span class="nx">update</span><span class="p">(</span><span class="nx">cname</span><span class="p">,</span> <span class="nx">qobj</span><span class="p">,</span> <span class="nx">qobjarr</span><span class="p">,</span> <span class="p">[</span><span class="nx">cb</span><span class="p">])</span>
 <span class="nx">update</span><span class="p">(</span><span class="nx">cname</span><span class="p">,</span> <span class="nx">qobj</span><span class="p">,</span> <span class="nx">qobjarr</span><span class="p">,</span> <span class="nx">hints</span><span class="p">,</span> <span class="p">[</span><span class="nx">cb</span><span class="p">])</span>
@@ -561,7 +561,7 @@ the following arguments: <cite>error, count</cite> where:</p>
 <tr class="field-odd field"><th class="field-name">Arguments:</th><td class="field-body"><ul class="first simple">
 <li><strong>cname</strong> (<em>string</em>) &#8211; Collection name</li>
 <li><strong>[qobj]</strong> (<em>object</em>) &#8211; Main JSON query object</li>
-<li><strong>[hints]</strong> (<em>object</em>) &#8211; JSON object specifies the query <a class="reference internal" href="../../ql/ql.html#qhints"><span>hints</span></a></li>
+<li><strong>[hints]</strong> (<em>object</em>) &#8211; JSON object specifies the query <a class="reference internal" href="../../ql/ql.html#qhints"><span class="std std-ref">hints</span></a></li>
 <li><strong>[qobjarr]</strong> (<em>array</em>) &#8211; Array of extra <cite>OR</cite> joined query objects</li>
 <li><strong>[cb]</strong> (<em>function</em>) &#8211; Callback function accepting arguments: <cite>error, count</cite></li>
 </ul>
@@ -587,7 +587,7 @@ the following arguments: <cite>error, count</cite> where:</p>
 <li>count: Number of documents matched the query.</li>
 </ul>
 <p><strong>Calling variations:</strong></p>
-<div class="highlight-js"><div class="highlight"><pre><span class="nx">count</span><span class="p">(</span><span class="nx">cname</span><span class="p">,</span> <span class="nx">qobj</span><span class="p">,</span> <span class="p">[</span><span class="nx">cb</span><span class="p">])</span>
+<div class="highlight-js"><div class="highlight"><pre><span></span><span class="nx">count</span><span class="p">(</span><span class="nx">cname</span><span class="p">,</span> <span class="nx">qobj</span><span class="p">,</span> <span class="p">[</span><span class="nx">cb</span><span class="p">])</span>
 <span class="nx">count</span><span class="p">(</span><span class="nx">cname</span><span class="p">,</span> <span class="nx">qobj</span><span class="p">,</span> <span class="nx">hints</span><span class="p">,</span> <span class="p">[</span><span class="nx">cb</span><span class="p">])</span>
 <span class="nx">count</span><span class="p">(</span><span class="nx">cname</span><span class="p">,</span> <span class="nx">qobj</span><span class="p">,</span> <span class="nx">qobjarr</span><span class="p">,</span> <span class="p">[</span><span class="nx">cb</span><span class="p">])</span>
 <span class="nx">count</span><span class="p">(</span><span class="nx">cname</span><span class="p">,</span> <span class="nx">qobj</span><span class="p">,</span> <span class="nx">qobjarr</span><span class="p">,</span> <span class="nx">hints</span><span class="p">,</span> <span class="p">[</span><span class="nx">cb</span><span class="p">])</span>
@@ -600,7 +600,7 @@ the following arguments: <cite>error, count</cite> where:</p>
 <tr class="field-odd field"><th class="field-name">Arguments:</th><td class="field-body"><ul class="first simple">
 <li><strong>cname</strong> (<em>string</em>) &#8211; Collection name</li>
 <li><strong>[qobj]</strong> (<em>object</em>) &#8211; Main JSON query object</li>
-<li><strong>[hints]</strong> (<em>object</em>) &#8211; JSON object specifies the query <a class="reference internal" href="../../ql/ql.html#qhints"><span>hints</span></a></li>
+<li><strong>[hints]</strong> (<em>object</em>) &#8211; JSON object specifies the query <a class="reference internal" href="../../ql/ql.html#qhints"><span class="std std-ref">hints</span></a></li>
 <li><strong>[qobjarr]</strong> (<em>array</em>) &#8211; Array of extra <cite>OR</cite> joined query objects</li>
 <li><strong>[cb]</strong> (<em>function</em>) &#8211; Callback function accepting arguments: <cite>error, count</cite></li>
 </ul>
@@ -1014,7 +1014,7 @@ provided, otherwise it will be executed in <cite>synchronous</cite> mode.</p>
         </div>
     </div>
     <div class="footer-copyright" role="contentinfo">
-        <div class="container">&copy; Copyright 2012-2015 Softmotions Ltd.
+        <div class="container">&copy; Copyright 2012-2017 Softmotions Ltd.
         </div>
     </div>
 </footer>

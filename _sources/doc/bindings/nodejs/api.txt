@@ -51,7 +51,7 @@ EJDB Nodejs API
 
     `copts`:
 
-    .. code-block:: js
+    .. code-block:: javascript
 
         {
           //Max number of cached records in shared memory segment. Default: 0
@@ -65,7 +65,7 @@ EJDB Nodejs API
 
           //If `true` collection's records will be compressed
           // with DEFLATE compression. Default: false
-          'compressed: false
+          'compressed': false
         }
 
     :param string cname: Collection name

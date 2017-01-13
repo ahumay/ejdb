@@ -21,7 +21,7 @@ This showcase based on trivial `rent a car` data model.
 Create/open the database
 ************************
 
-.. code-block:: js
+.. code-block:: sh
 
     $ ~/tmp$ ejdb rentacar
     Welcome to EJDB CLI v1.0.55

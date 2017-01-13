@@ -40,7 +40,6 @@ Community
 * `EJDB on Github <https://github.com/Softmotions/ejdb>`_
 * `@ejdblab Twitter <https://twitter.com/ejdblab>`_
 * `EJDB on Gitter <https://gitter.im/Softmotions/ejdb>`_
-* `Google groups <https://groups.google.com/forum/#!forum/ejdb>`_
 
 Documentation
 -------------
@@ -59,3 +58,13 @@ Documentation
     doc/limitations
     doc/ejdb2/index
     doc/mongodb
+
+
+.. note::
+
+    Here you can use the following keybindings for navigation:
+
+    |  `→` Go to the next chapter
+    |  `←` Got to the previous chapter
+    |  `Ctrl + ↑` Go to the parent chapter
+    |  `Home` Go to the documentation home page

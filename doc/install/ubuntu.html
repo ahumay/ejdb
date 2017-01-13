@@ -87,7 +87,7 @@
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Installation</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="">Ubuntu/Debian</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Ubuntu/Debian</a></li>
 <li class="toctree-l2"><a class="reference internal" href="osx.html">OSX</a></li>
 <li class="toctree-l2"><a class="reference internal" href="windows.html">Windows</a></li>
 <li class="toctree-l2"><a class="reference internal" href="archives.html">EJDB binaries</a></li>
@@ -198,7 +198,7 @@
 <p>In order to install the latest <cite>libejdb</cite> distribution on
 Ubuntu boxes you can use <a class="reference external" href="https://launchpad.net/~adamansky/+archive/ubuntu/ejdb">EJDB Launchpad PPA</a>
 repository.</p>
-<div class="highlight-sh"><div class="highlight"><pre>sudo add-apt-repository ppa:adamansky/ejdb
+<div class="highlight-sh"><div class="highlight"><pre><span></span>sudo add-apt-repository ppa:adamansky/ejdb
 sudo apt-get update
 sudo apt-get install ejdb ejdb-dbg
 </pre></div>
@@ -206,7 +206,7 @@ sudo apt-get install ejdb ejdb-dbg
 <div class="section" id="building-deb-packages">
 <h2>Building .deb packages<a class="headerlink" href="#building-deb-packages" title="Permalink to this headline">¶</a></h2>
 <p>Before building EJDB <cite>.deb</cite> packages you need the <cite>debhelper</cite> tool:</p>
-<div class="highlight-sh"><div class="highlight"><pre>sudo apt-get install debhelper
+<div class="highlight-sh"><div class="highlight"><pre><span></span>sudo apt-get install debhelper
 </pre></div>
 </div>
 <p>And satisfy basic prerequisites for <cite>libejdb</cite> source building:</p>
@@ -216,7 +216,7 @@ sudo apt-get install ejdb ejdb-dbg
 <li>gcc &gt;= 4.7 or clang &gt;= 3.4 C compiler</li>
 <li>zlib-dev</li>
 </ul>
-<div class="highlight-sh"><div class="highlight"><pre>mkdir ./build
+<div class="highlight-sh"><div class="highlight"><pre><span></span>mkdir ./build
 <span class="nb">cd</span> ./build
 cmake -DCMAKE_BUILD_TYPE<span class="o">=</span>RelWithDebugInfo -DPACKAGE_DEB<span class="o">=</span>ON
 </pre></div>
@@ -281,7 +281,7 @@ cmake -DCMAKE_BUILD_TYPE<span class="o">=</span>RelWithDebugInfo -DPACKAGE_DEB<s
         </div>
     </div>
     <div class="footer-copyright" role="contentinfo">
-        <div class="container">&copy; Copyright 2012-2015 Softmotions Ltd.
+        <div class="container">&copy; Copyright 2012-2017 Softmotions Ltd.
         </div>
     </div>
 </footer>

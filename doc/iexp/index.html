@@ -133,7 +133,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../bindings/thirdparty.html">Third-party language bindings</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">Import/Export database data</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Import/Export database data</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#c-api">C API</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#export-command-spec">Export command spec</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#import-command-spec">Import command spec</a></li>
@@ -204,11 +204,11 @@ bson* <code class="descname">ejdbcommand</code><span class="sig-paren">(</span>E
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
 <li><strong>jb</strong> (<em>EJDB*</em>) &#8211; Pointer to the database object</li>
-<li><strong>cmdbson</strong> (<em>bson*</em>) &#8211; <a class="reference internal" href="#export-cmd-spec"><span>Command specification</span></a></li>
+<li><strong>cmdbson</strong> (<em>bson*</em>) &#8211; <a class="reference internal" href="#export-cmd-spec"><span class="std std-ref">Command specification</span></a></li>
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">Allocated <a class="reference internal" href="#import-cmd-response"><span>command response</span></a> BSON object.
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">Allocated <a class="reference internal" href="#import-cmd-response"><span class="std std-ref">command response</span></a> BSON object.
 Caller should call <cite>bson_del()</cite> on it.</p>
 </td>
 </tr>
@@ -219,7 +219,7 @@ Caller should call <cite>bson_del()</cite> on it.</p>
 </div>
 <div class="section" id="export-command-spec">
 <span id="export-cmd-spec"></span><h2>Export command spec<a class="headerlink" href="#export-command-spec" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-js"><div class="highlight"><pre><span class="p">{</span>
+<div class="highlight-js"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s1">&#39;export&#39;</span><span class="o">:</span> <span class="p">{</span>
         <span class="nx">path</span><span class="o">:</span> <span class="s1">&#39;&lt;Export files target directory&gt;&#39;</span><span class="p">,</span>
         <span class="nx">cnames</span><span class="o">:</span> <span class="p">[],</span> <span class="c1">//List of collection names to export</span>
@@ -236,7 +236,7 @@ Caller should call <cite>bson_del()</cite> on it.</p>
 </div>
 <div class="section" id="import-command-spec">
 <h2>Import command spec<a class="headerlink" href="#import-command-spec" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-js"><div class="highlight"><pre><span class="p">{</span>
+<div class="highlight-js"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s1">&#39;import&#39;</span><span class="o">:</span> <span class="p">{</span>
         <span class="nx">path</span><span class="o">:</span> <span class="s1">&#39;&lt;Import files source directory&gt;&#39;</span>
         <span class="nx">cnames</span><span class="o">:</span> <span class="p">[],</span> <span class="c1">//List of collection names to import</span>
@@ -263,7 +263,7 @@ Caller should call <cite>bson_del()</cite> on it.</p>
 </div>
 <div class="section" id="command-response">
 <span id="export-cmd-response"></span><span id="import-cmd-response"></span><span id="cmd-response"></span><h2>Command response<a class="headerlink" href="#command-response" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-js"><div class="highlight"><pre><span class="p">{</span>
+<div class="highlight-js"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="nx">log</span><span class="o">:</span> <span class="s1">&#39;&lt;Command execution diagnostic log&gt;&#39;</span><span class="p">,</span>
     <span class="nx">error</span><span class="o">:</span> <span class="s1">&#39;&lt;Error message&gt;&#39;</span><span class="p">,</span>
     <span class="nx">errorCode</span><span class="o">:</span> <span class="mi">0</span> <span class="c1">//Error code number</span>
@@ -323,7 +323,7 @@ Caller should call <cite>bson_del()</cite> on it.</p>
         </div>
     </div>
     <div class="footer-copyright" role="contentinfo">
-        <div class="container">&copy; Copyright 2012-2015 Softmotions Ltd.
+        <div class="container">&copy; Copyright 2012-2017 Softmotions Ltd.
         </div>
     </div>
 </footer>

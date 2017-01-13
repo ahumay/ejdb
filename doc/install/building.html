@@ -94,7 +94,7 @@
 <li class="toctree-l2"><a class="reference internal" href="osx.html">OSX</a></li>
 <li class="toctree-l2"><a class="reference internal" href="windows.html">Windows</a></li>
 <li class="toctree-l2"><a class="reference internal" href="archives.html">EJDB binaries</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">Building from sources</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Building from sources</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../cli.html">Command line interface</a><ul>
@@ -210,30 +210,30 @@
 </div>
 <div class="section" id="make">
 <h2>Make<a class="headerlink" href="#make" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-sh"><div class="highlight"><pre>git clone https://github.com/Softmotions/ejdb.git
-<span class="nb">cd </span>ejdb
+<div class="highlight-sh"><div class="highlight"><pre><span></span>git clone https://github.com/Softmotions/ejdb.git
+<span class="nb">cd</span> ejdb
 mkdir build
-<span class="nb">cd </span>build
+<span class="nb">cd</span> build
 cmake -DCMAKE_BUILD_TYPE<span class="o">=</span>Release ../
 make
 make install
-<span class="c"># Or you can create tgz package:</span>
+<span class="c1"># Or you can create tgz package:</span>
 make package
 </pre></div>
 </div>
 </div>
 <div class="section" id="cmake-basic-build-d-options">
 <h2>CMake basic build(-D) options<a class="headerlink" href="#cmake-basic-build-d-options" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-sh"><div class="highlight"><pre>// Build ejdb sample projects
+<div class="highlight-sh"><div class="highlight"><pre><span></span>// Build ejdb sample projects
 BUILD_SAMPLES:BOOL<span class="o">=</span>ON
 
 // Build shared libraries
 BUILD_SHARED_LIBS:BOOL<span class="o">=</span>ON
 
-// Build <span class="nb">test </span>cases
+// Build <span class="nb">test</span> cases
 BUILD_TESTS:BOOL<span class="o">=</span>OFF
 
-// Choose the <span class="nb">type </span>of build, options are:
+// Choose the <span class="nb">type</span> of build, options are:
 // - None<span class="o">(</span>CMAKE_CXX_FLAGS or CMAKE_C_FLAGS used<span class="o">)</span>
 // - Debug
 // - Release
@@ -267,7 +267,7 @@ UPLOAD_PPA:BOOL<span class="o">=</span>OFF
 using cross-compilation within the MXE cross build environment.
 First of all you need to checkout the <a class="reference external" href="http://mxe.cc">MXE cross build environment</a></p>
 <p>Install the required packages:</p>
-<div class="highlight-sh"><div class="highlight"><pre>sudo apt-get install   <span class="se">\</span>
+<div class="highlight-sh"><div class="highlight"><pre><span></span>sudo apt-get install   <span class="se">\</span>
 autoconf automake autopoint bash bison bzip2 cmake flex  <span class="se">\</span>
 gettext git g++ gperf intltool libffi-dev libtool   <span class="se">\</span>
 libltdl-dev libssl-dev libxml-parser-perl make openssl   <span class="se">\</span>
@@ -276,34 +276,34 @@ unzip wget xz-utils <span class="se">\</span>
 wine
 </pre></div>
 </div>
-<div class="highlight-sh"><div class="highlight"><pre>git clone https://github.com/mxe/mxe.git
+<div class="highlight-sh"><div class="highlight"><pre><span></span>git clone https://github.com/mxe/mxe.git
 </pre></div>
 </div>
 <p>Then create/edit MXE settings file:</p>
-<div class="highlight-sh"><div class="highlight"><pre><span class="nb">cd</span> &lt;mxe checkout dir&gt;
+<div class="highlight-sh"><div class="highlight"><pre><span></span><span class="nb">cd</span> &lt;mxe checkout dir&gt;
 nano ./settings.mk
 </pre></div>
 </div>
 <p>Save the following content in  <cite>settings.mk</cite>:</p>
-<div class="highlight-sh"><div class="highlight"><pre>JOBS :<span class="o">=</span> 1
+<div class="highlight-sh"><div class="highlight"><pre><span></span>JOBS :<span class="o">=</span> 1
 MXE_TARGETS :<span class="o">=</span> x86_64-w64-mingw32.static i686-w64-mingw32.static
 LOCAL_PKG_LIST :<span class="o">=</span> winpthreads pcre zlib lzo bzip2 cunit
-.DEFAULT <span class="nb">local</span>-pkg-list:
-<span class="nb">local</span>-pkg-list: <span class="k">$(</span>LOCAL_PKG_LIST<span class="k">)</span>
+.DEFAULT local-pkg-list:
+local-pkg-list: <span class="k">$(</span>LOCAL_PKG_LIST<span class="k">)</span>
 </pre></div>
 </div>
 <p>Build MXE packages:</p>
-<div class="highlight-sh"><div class="highlight"><pre><span class="nb">cd</span> &lt;mxe checkout dir&gt;
+<div class="highlight-sh"><div class="highlight"><pre><span></span><span class="nb">cd</span> &lt;mxe checkout dir&gt;
 make
 </pre></div>
 </div>
 <p>Finally build <cite>libejdb</cite> windows binaries:</p>
-<div class="highlight-sh"><div class="highlight"><pre><span class="nb">export </span><span class="nv">MXE_HOME</span><span class="o">=</span>&lt;mxe checkout dir&gt;
-<span class="nb">export </span><span class="nv">MXE_CFG</span><span class="o">=</span>&lt;x86_64-w64-mingw32.static<span class="p">|</span>i686-w64-mingw32.static&gt;
+<div class="highlight-sh"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">MXE_HOME</span><span class="o">=</span>&lt;mxe checkout dir&gt;
+<span class="nb">export</span> <span class="nv">MXE_CFG</span><span class="o">=</span>&lt;x86_64-w64-mingw32.static<span class="p">|</span>i686-w64-mingw32.static&gt;
 
 <span class="nb">cd</span> &lt;ejdb checkout dir&gt;
 mkdir build-win32
-<span class="nb">cd </span>build-wind32
+<span class="nb">cd</span> build-wind32
 cmake -DCMAKE_BUILD_TYPE<span class="o">=</span>Release -DCMAKE_TOOLCHAIN_FILE<span class="o">=</span>../win64-tc.cmake ..
 make package
 </pre></div>
@@ -368,7 +368,7 @@ make package
         </div>
     </div>
     <div class="footer-copyright" role="contentinfo">
-        <div class="container">&copy; Copyright 2012-2015 Softmotions Ltd.
+        <div class="container">&copy; Copyright 2012-2017 Softmotions Ltd.
         </div>
     </div>
 </footer>

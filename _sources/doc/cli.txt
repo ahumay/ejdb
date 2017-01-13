@@ -65,9 +65,10 @@ Let's open/create db:
 
 For opened database we have more methods to operate:
 
-.. code-block:: js
+.. code-block:: text
 
-    { close: [Function] ([cb]) Close database,
+    {
+      close: [Function] ([cb]) Close database,
       status: [Function] Get current database status,
       find: [Function] (cname, [qobj], [qobjarr], [hints], [cb])
             Execute query on collection,

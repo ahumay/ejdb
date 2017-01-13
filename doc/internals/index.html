@@ -116,7 +116,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../ql/joins.html#simple-joins-showcase">Simple joins showcase</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">EJDB Internals</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">EJDB Internals</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#tokyo-cabinet">Tokyo Cabinet</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#document-storage-model">Document storage model</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#indexing">Indexing</a></li>
@@ -258,7 +258,7 @@ treats indexed values as numbers.</li>
 <li>Inverted index for matching values in JSON arrays
 or in string values treated as a set of space delimited
 tokens. Indexes of this type are used for effective matching in an array
-as well as for <a class="reference internal" href="../ql/ql.html#strand"><span>$strand</span></a> and <a class="reference internal" href="../ql/ql.html#stror"><span>$stror</span></a> operations.</li>
+as well as for <a class="reference internal" href="../ql/ql.html#strand"><span class="std std-ref">$strand</span></a> and <a class="reference internal" href="../ql/ql.html#stror"><span class="std std-ref">$stror</span></a> operations.</li>
 </ul>
 <p>Let us consider the index structure of sample collection
 of documents named <cite>Books</cite>.
@@ -276,7 +276,7 @@ field data type to be only 12-byte <a class="reference internal" href="../ql/ql.
 <p>Only one index is used during query execution.
 Major index selection among possible candidates is based on the number of empirical rules.
 Collections access/selectivity stats are not taken into account in the current EJDB  1.2.10 release.
-EJDB supports token matching inverted indexes backed by B+ tree. Arrays, <a class="reference internal" href="../ql/ql.html#stror"><span>$stror</span></a>, <a class="reference internal" href="../ql/ql.html#strand"><span>$strand</span></a> matching.</p>
+EJDB supports token matching inverted indexes backed by B+ tree. Arrays, <a class="reference internal" href="../ql/ql.html#stror"><span class="std std-ref">$stror</span></a>, <a class="reference internal" href="../ql/ql.html#strand"><span class="std std-ref">$strand</span></a> matching.</p>
 <p>The following factors are taken into account
 when choosing an query index:</p>
 <ul class="simple">
@@ -286,11 +286,11 @@ but only for fields presented in a query.</li>
 In this case, using of fast inorder traversal of B+ tree for
 sorted field will speed up query execution.</li>
 </ul>
-<p>EJDB supports a special type of case-insensitive string indexes used by <a class="reference internal" href="../ql/ql.html#icase"><span>$icase</span></a> matching operation where all
+<p>EJDB supports a special type of case-insensitive string indexes used by <a class="reference internal" href="../ql/ql.html#icase"><span class="std std-ref">$icase</span></a> matching operation where all
 indexed values normalized by <a class="reference external" href="http://julialang.org/utf8proc/">utf8proc library</a>.</p>
 <p>Particular <cite>fieldpath</cite> values can contain data of arbitrary types (token array, numeric, string),
 so one <cite>fieldpath</cite> may be associated with number of different B+ indexes for each type.</p>
-<div class="highlight-js"><div class="highlight"><pre><span class="nx">db</span><span class="p">.</span><span class="nx">ensureStringIndex</span><span class="p">(</span><span class="s1">&#39;persons&#39;</span><span class="p">,</span> <span class="s1">&#39;login&#39;</span><span class="p">);</span>
+<div class="highlight-js"><div class="highlight"><pre><span></span><span class="nx">db</span><span class="p">.</span><span class="nx">ensureStringIndex</span><span class="p">(</span><span class="s1">&#39;persons&#39;</span><span class="p">,</span> <span class="s1">&#39;login&#39;</span><span class="p">);</span>
 
 <span class="c1">//case-insensitive index</span>
 <span class="nx">db</span><span class="p">.</span><span class="nx">ensureIStringIndex</span><span class="p">(</span><span class="s1">&#39;persons&#39;</span><span class="p">,</span> <span class="s1">&#39;login&#39;</span><span class="p">);</span>
@@ -379,7 +379,7 @@ transactions requires a further development.</p>
         </div>
     </div>
     <div class="footer-copyright" role="contentinfo">
-        <div class="container">&copy; Copyright 2012-2015 Softmotions Ltd.
+        <div class="container">&copy; Copyright 2012-2017 Softmotions Ltd.
         </div>
     </div>
 </footer>

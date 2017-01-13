@@ -81,7 +81,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../news.html#archived">Archived</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">Intro snippets</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Intro snippets</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#c-c">C/C++</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#nodejs">Nodejs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#python">Python</a></li>
@@ -213,7 +213,7 @@
 </div>
 <div class="section" id="c-c">
 <h2><a class="toc-backref" href="#id2">C/C++</a><a class="headerlink" href="#c-c" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;ejdb/ejdb.h&gt;</span>
+<div class="highlight-c"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;ejdb/ejdb.h&gt;</span><span class="cp"></span>
 
 <span class="k">static</span> <span class="n">EJDB</span> <span class="o">*</span><span class="n">jb</span><span class="p">;</span>
 
@@ -227,7 +227,7 @@
     <span class="n">EJCOLL</span> <span class="o">*</span><span class="n">coll</span> <span class="o">=</span> <span class="n">ejdbcreatecoll</span><span class="p">(</span><span class="n">jb</span><span class="p">,</span> <span class="s">&quot;contacts&quot;</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">);</span>
 
     <span class="n">bson</span> <span class="n">bsrec</span><span class="p">;</span>
-    <span class="kt">bson_oid_t</span> <span class="n">oid</span><span class="p">;</span>
+    <span class="n">bson_oid_t</span> <span class="n">oid</span><span class="p">;</span>
 
     <span class="c1">//Insert one record:</span>
     <span class="c1">//JSON: {&#39;name&#39; : &#39;Bruce&#39;, &#39;phone&#39; : &#39;333-222-333&#39;, &#39;age&#39; : 58}</span>
@@ -280,14 +280,14 @@
 </pre></div>
 </div>
 <p>You can save this code in csnippet.c then build:</p>
-<div class="highlight-sh"><div class="highlight"><pre>gcc -std<span class="o">=</span>c99 -Wall -pedantic  -c -o csnippet.o csnippet.c
+<div class="highlight-sh"><div class="highlight"><pre><span></span>gcc -std<span class="o">=</span>c99 -Wall -pedantic  -c -o csnippet.o csnippet.c
 gcc -o csnippet csnippet.o -ltcejdb
 </pre></div>
 </div>
 </div>
 <div class="section" id="nodejs">
 <h2><a class="toc-backref" href="#id3">Nodejs</a><a class="headerlink" href="#nodejs" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-js"><div class="highlight"><pre><span class="kd">var</span> <span class="nx">EJDB</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&quot;ejdb&quot;</span><span class="p">);</span>
+<div class="highlight-js"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nx">EJDB</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&quot;ejdb&quot;</span><span class="p">);</span>
 <span class="c1">//Open zoo DB</span>
 <span class="kd">var</span> <span class="nx">jb</span> <span class="o">=</span> <span class="nx">EJDB</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="s2">&quot;zoo&quot;</span><span class="p">,</span>
                     <span class="nx">EJDB</span><span class="p">.</span><span class="nx">DEFAULT_OPEN_MODE</span> <span class="o">|</span> <span class="nx">EJDB</span><span class="p">.</span><span class="nx">JBOTRUNC</span><span class="p">);</span>
@@ -339,42 +339,42 @@ gcc -o csnippet csnippet.o -ltcejdb
 </div>
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
-<p class="last"><a class="reference internal" href="bindings/nodejs/index.html#nodejs"><span>Nodejs language binding</span></a></p>
+<p class="last"><a class="reference internal" href="bindings/nodejs/index.html#nodejs"><span class="std std-ref">Nodejs language binding</span></a></p>
 </div>
 </div>
 <div class="section" id="python">
 <h2><a class="toc-backref" href="#id4">Python</a><a class="headerlink" href="#python" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">pyejdb</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyejdb</span>
 <span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
 
-<span class="c">#Open database</span>
-<span class="n">ejdb</span> <span class="o">=</span> <span class="n">pyejdb</span><span class="o">.</span><span class="n">EJDB</span><span class="p">(</span><span class="s">&quot;zoo&quot;</span><span class="p">,</span> <span class="n">pyejdb</span><span class="o">.</span><span class="n">DEFAULT_OPEN_MODE</span> <span class="o">|</span> <span class="n">pyejdb</span><span class="o">.</span><span class="n">JBOTRUNC</span><span class="p">)</span>
+<span class="c1">#Open database</span>
+<span class="n">ejdb</span> <span class="o">=</span> <span class="n">pyejdb</span><span class="o">.</span><span class="n">EJDB</span><span class="p">(</span><span class="s2">&quot;zoo&quot;</span><span class="p">,</span> <span class="n">pyejdb</span><span class="o">.</span><span class="n">DEFAULT_OPEN_MODE</span> <span class="o">|</span> <span class="n">pyejdb</span><span class="o">.</span><span class="n">JBOTRUNC</span><span class="p">)</span>
 
 <span class="n">parrot1</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s">&quot;name&quot;</span><span class="p">:</span> <span class="s">&quot;Grenny&quot;</span><span class="p">,</span>
-    <span class="s">&quot;type&quot;</span><span class="p">:</span> <span class="s">&quot;African Grey&quot;</span><span class="p">,</span>
-    <span class="s">&quot;male&quot;</span><span class="p">:</span> <span class="bp">True</span><span class="p">,</span>
-    <span class="s">&quot;age&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-    <span class="s">&quot;birthdate&quot;</span><span class="p">:</span> <span class="n">datetime</span><span class="o">.</span><span class="n">utcnow</span><span class="p">(),</span>
-    <span class="s">&quot;likes&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s">&quot;green color&quot;</span><span class="p">,</span> <span class="s">&quot;night&quot;</span><span class="p">,</span> <span class="s">&quot;toys&quot;</span><span class="p">],</span>
-    <span class="s">&quot;extra1&quot;</span><span class="p">:</span> <span class="bp">None</span>
+    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Grenny&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;African Grey&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;male&quot;</span><span class="p">:</span> <span class="bp">True</span><span class="p">,</span>
+    <span class="s2">&quot;age&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="s2">&quot;birthdate&quot;</span><span class="p">:</span> <span class="n">datetime</span><span class="o">.</span><span class="n">utcnow</span><span class="p">(),</span>
+    <span class="s2">&quot;likes&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;green color&quot;</span><span class="p">,</span> <span class="s2">&quot;night&quot;</span><span class="p">,</span> <span class="s2">&quot;toys&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;extra1&quot;</span><span class="p">:</span> <span class="bp">None</span>
 <span class="p">}</span>
 <span class="n">parrot2</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s">&quot;name&quot;</span><span class="p">:</span> <span class="s">&quot;Bounty&quot;</span><span class="p">,</span>
-    <span class="s">&quot;type&quot;</span><span class="p">:</span> <span class="s">&quot;Cockatoo&quot;</span><span class="p">,</span>
-    <span class="s">&quot;male&quot;</span><span class="p">:</span> <span class="bp">False</span><span class="p">,</span>
-    <span class="s">&quot;age&quot;</span><span class="p">:</span> <span class="mi">15</span><span class="p">,</span>
-    <span class="s">&quot;birthdate&quot;</span><span class="p">:</span> <span class="n">datetime</span><span class="o">.</span><span class="n">utcnow</span><span class="p">(),</span>
-    <span class="s">&quot;likes&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s">&quot;sugar cane&quot;</span><span class="p">],</span>
-    <span class="s">&quot;extra1&quot;</span><span class="p">:</span> <span class="bp">None</span>
+    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Bounty&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Cockatoo&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;male&quot;</span><span class="p">:</span> <span class="bp">False</span><span class="p">,</span>
+    <span class="s2">&quot;age&quot;</span><span class="p">:</span> <span class="mi">15</span><span class="p">,</span>
+    <span class="s2">&quot;birthdate&quot;</span><span class="p">:</span> <span class="n">datetime</span><span class="o">.</span><span class="n">utcnow</span><span class="p">(),</span>
+    <span class="s2">&quot;likes&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;sugar cane&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;extra1&quot;</span><span class="p">:</span> <span class="bp">None</span>
 <span class="p">}</span>
-<span class="n">ejdb</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s">&quot;parrots2&quot;</span><span class="p">,</span> <span class="n">parrot1</span><span class="p">,</span> <span class="n">parrot2</span><span class="p">)</span>
+<span class="n">ejdb</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s2">&quot;parrots2&quot;</span><span class="p">,</span> <span class="n">parrot1</span><span class="p">,</span> <span class="n">parrot2</span><span class="p">)</span>
 
-<span class="k">with</span> <span class="n">ejdb</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s">&quot;parrots2&quot;</span><span class="p">,</span> <span class="p">{</span><span class="s">&quot;likes&quot;</span> <span class="p">:</span> <span class="s">&quot;toys&quot;</span><span class="p">},</span>
-          <span class="n">hints</span><span class="o">=</span><span class="p">{</span><span class="s">&quot;$orderby&quot;</span> <span class="p">:</span> <span class="p">[(</span><span class="s">&quot;name&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)]})</span> <span class="k">as</span> <span class="n">cur</span><span class="p">:</span>
-    <span class="k">print</span><span class="p">(</span><span class="s">&quot;found </span><span class="si">%s</span><span class="s"> parrots&quot;</span> <span class="o">%</span> <span class="nb">len</span><span class="p">(</span><span class="n">cur</span><span class="p">))</span>
+<span class="k">with</span> <span class="n">ejdb</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;parrots2&quot;</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;likes&quot;</span> <span class="p">:</span> <span class="s2">&quot;toys&quot;</span><span class="p">},</span>
+          <span class="n">hints</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;$orderby&quot;</span> <span class="p">:</span> <span class="p">[(</span><span class="s2">&quot;name&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)]})</span> <span class="k">as</span> <span class="n">cur</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;found </span><span class="si">%s</span><span class="s2"> parrots&quot;</span> <span class="o">%</span> <span class="nb">len</span><span class="p">(</span><span class="n">cur</span><span class="p">))</span>
     <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">cur</span><span class="p">:</span>
-        <span class="k">print</span><span class="p">(</span><span class="s">&quot;</span><span class="si">%s</span><span class="s"> likes toys!&quot;</span> <span class="o">%</span> <span class="n">p</span><span class="p">[</span><span class="s">&quot;name&quot;</span><span class="p">])</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%s</span><span class="s2"> likes toys!&quot;</span> <span class="o">%</span> <span class="n">p</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">])</span>
 
 <span class="n">ejdb</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </pre></div>
@@ -386,7 +386,7 @@ gcc -o csnippet csnippet.o -ltcejdb
 </div>
 <div class="section" id="lua">
 <h2><a class="toc-backref" href="#id5">Lua</a><a class="headerlink" href="#lua" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-lua"><div class="highlight"><pre><span class="kd">local</span> <span class="n">ejdb</span> <span class="o">=</span> <span class="nb">require</span><span class="p">(</span><span class="s2">&quot;</span><span class="s">ejdb&quot;</span><span class="p">)</span>
+<div class="highlight-lua"><div class="highlight"><pre><span></span><span class="kd">local</span> <span class="n">ejdb</span> <span class="o">=</span> <span class="nb">require</span><span class="p">(</span><span class="s2">&quot;</span><span class="s">ejdb&quot;</span><span class="p">)</span>
 <span class="kd">local</span> <span class="n">inspect</span> <span class="o">=</span> <span class="nb">require</span><span class="p">(</span><span class="s2">&quot;</span><span class="s">ejdb.inspect&quot;</span><span class="p">)</span>
 <span class="kd">local</span> <span class="n">Q</span> <span class="o">=</span> <span class="n">ejdb</span><span class="p">.</span><span class="n">Q</span>
 
@@ -454,7 +454,7 @@ gcc -o csnippet csnippet.o -ltcejdb
 </div>
 <div class="section" id="ruby">
 <h2><a class="toc-backref" href="#id6">Ruby</a><a class="headerlink" href="#ruby" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-ruby"><div class="highlight"><pre><span class="nb">require</span> <span class="s2">&quot;rbejdb&quot;</span>
+<div class="highlight-ruby"><div class="highlight"><pre><span></span><span class="nb">require</span> <span class="s2">&quot;rbejdb&quot;</span>
 
 <span class="c1">#Open zoo DB</span>
 <span class="n">jb</span> <span class="o">=</span> <span class="no">EJDB</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;zoo&quot;</span><span class="p">,</span> <span class="no">EJDB</span><span class="o">::</span><span class="no">DEFAULT_OPEN_MODE</span> <span class="o">|</span> <span class="no">EJDB</span><span class="o">::</span><span class="no">JBOTRUNC</span><span class="p">)</span>
@@ -501,7 +501,7 @@ gcc -o csnippet csnippet.o -ltcejdb
 </div>
 <div class="section" id="c">
 <h2><a class="toc-backref" href="#id7">C#</a><a class="headerlink" href="#c" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-c#"><div class="highlight"><pre><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<div class="highlight-c#"><div class="highlight"><pre><span></span><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
 <span class="k">using</span> <span class="nn">Ejdb.DB</span><span class="p">;</span>
 <span class="k">using</span> <span class="nn">Ejdb.BSON</span><span class="p">;</span>
 
@@ -565,7 +565,7 @@ gcc -o csnippet csnippet.o -ltcejdb
 <p class="first admonition-title">See also</p>
 <p class="last"><a class="reference external" href="https://github.com/Softmotions/ejdb-csharp">C# language binding</a></p>
 </div>
-<div class="highlight-java"><div class="highlight"><pre><span class="kn">package</span> <span class="nn">org.ejdb.sample1</span><span class="o">;</span>
+<div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">package</span> <span class="nn">org.ejdb.sample1</span><span class="o">;</span>
 
 <span class="kn">import</span> <span class="nn">org.ejdb.bson.BSONObject</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">org.ejdb.driver.EJDB</span><span class="o">;</span>
@@ -676,7 +676,7 @@ gcc -o csnippet csnippet.o -ltcejdb
 </div>
 <div class="section" id="go">
 <h2><a class="toc-backref" href="#id8">Go</a><a class="headerlink" href="#go" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-go"><div class="highlight"><pre><span class="kn">package</span> <span class="nx">ejdbtutorial</span>
+<div class="highlight-go"><div class="highlight"><pre><span></span><span class="kn">package</span> <span class="nx">ejdbtutorial</span>
 
 <span class="kn">import</span> <span class="p">(</span>
     <span class="s">&quot;fmt&quot;</span>
@@ -728,7 +728,7 @@ gcc -o csnippet csnippet.o -ltcejdb
 <h2><a class="toc-backref" href="#id9">Other third-party bindings</a><a class="headerlink" href="#other-third-party-bindings" title="Permalink to this headline">¶</a></h2>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last"><a class="reference internal" href="bindings/thirdparty.html#thirdparty-bindings"><span>There are other language bindings provided by our community</span></a>.</p>
+<p class="last"><a class="reference internal" href="bindings/thirdparty.html#thirdparty-bindings"><span class="std std-ref">There are other language bindings provided by our community</span></a>.</p>
 </div>
 </div>
 </div>
@@ -783,7 +783,7 @@ gcc -o csnippet csnippet.o -ltcejdb
         </div>
     </div>
     <div class="footer-copyright" role="contentinfo">
-        <div class="container">&copy; Copyright 2012-2015 Softmotions Ltd.
+        <div class="container">&copy; Copyright 2012-2017 Softmotions Ltd.
         </div>
     </div>
 </footer>

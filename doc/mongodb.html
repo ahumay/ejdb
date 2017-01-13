@@ -153,7 +153,7 @@
 <li class="toctree-l2"><a class="reference internal" href="ejdb2/index.html#progress">Progress</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">Mongodb compatibility</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Mongodb compatibility</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#logical-operators">Logical operators</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#element-level-operators">Element level operators</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#geospartial-operators">Geospartial operators</a></li>
@@ -322,7 +322,7 @@ It may be hard to include this type of engine into embedded DB.</td>
 </tr>
 <tr class="row-odd"><td>$(projection)</td>
 <td>Y</td>
-<td><a class="reference internal" href="ql/ql.html#id14"><span>Our implementation</span></a> overcomes the following mongodb restriction: &#8220;Only one array field can appear in the query document&#8221;</td>
+<td><a class="reference internal" href="ql/ql.html#id14"><span class="std std-ref">Our implementation</span></a> overcomes the following mongodb restriction: &#8220;Only one array field can appear in the query document&#8221;</td>
 </tr>
 <tr class="row-even"><td>$size</td>
 <td>N</td>
@@ -360,15 +360,15 @@ It may be hard to include this type of engine into embedded DB.</td>
 </tr>
 <tr class="row-odd"><td>$addToSet, $pull</td>
 <td>Y</td>
-<td>The EJDB specific <a class="reference internal" href="ql/ql.html#addtosetall"><span>$addToSetAll</span></a>, <a class="reference internal" href="ql/ql.html#pullall"><span>$pullAll</span></a> are also implemented.</td>
+<td>The EJDB specific <a class="reference internal" href="ql/ql.html#addtosetall"><span class="std std-ref">$addToSetAll</span></a>, <a class="reference internal" href="ql/ql.html#pullall"><span class="std std-ref">$pullAll</span></a> are also implemented.</td>
 </tr>
 <tr class="row-even"><td>$setOnInsert</td>
 <td>YN</td>
-<td>Special <a class="reference internal" href="ql/ql.html#upsert"><span>$upsert</span></a> operator is used. Behaviour is a bit different</td>
+<td>Special <a class="reference internal" href="ql/ql.html#upsert"><span class="std std-ref">$upsert</span></a> operator is used. Behaviour is a bit different</td>
 </tr>
 <tr class="row-odd"><td>$each</td>
 <td>YN</td>
-<td><a class="reference internal" href="ql/ql.html#addtosetall"><span>$addToSetAll</span></a> is used instead</td>
+<td><a class="reference internal" href="ql/ql.html#addtosetall"><span class="std std-ref">$addToSetAll</span></a> is used instead</td>
 </tr>
 <tr class="row-even"><td>$rename</td>
 <td>Y</td>
@@ -384,7 +384,7 @@ It may be hard to include this type of engine into embedded DB.</td>
 </tr>
 <tr class="row-odd"><td>$push</td>
 <td>Y</td>
-<td><a class="reference internal" href="ql/ql.html#pushall"><span>$pushAll</span></a> is the batch version of <a class="reference internal" href="ql/ql.html#push"><span>$push</span></a> operator.</td>
+<td><a class="reference internal" href="ql/ql.html#pushall"><span class="std std-ref">$pushAll</span></a> is the batch version of <a class="reference internal" href="ql/ql.html#push"><span class="std std-ref">$push</span></a> operator.</td>
 </tr>
 </tbody>
 </table>
@@ -414,7 +414,7 @@ It may be hard to include this type of engine into embedded DB.</td>
 </tr>
 <tr class="row-even"><td>$maxScan</td>
 <td>YN</td>
-<td>EJDB <a class="reference internal" href="ql/ql.html#max"><span>$max</span></a> operator is used</td>
+<td>EJDB <a class="reference internal" href="ql/ql.html#max"><span class="std std-ref">$max</span></a> operator is used</td>
 </tr>
 <tr class="row-odd"><td>$hint</td>
 <td>N</td>
@@ -448,26 +448,26 @@ It may be hard to include this type of engine into embedded DB.</td>
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td><a class="reference internal" href="ql/ql.html#dropall"><span>$dropall</span></a></td>
+<tr class="row-even"><td><a class="reference internal" href="ql/ql.html#dropall"><span class="std std-ref">$dropall</span></a></td>
 <td>In-place record removal operation</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="ql/ql.html#bt"><span>$bt</span></a></td>
+<tr class="row-odd"><td><a class="reference internal" href="ql/ql.html#bt"><span class="std std-ref">$bt</span></a></td>
 <td>Matching between a numbers (as in SQL)</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="ql/ql.html#do"><span>$do</span></a></td>
-<td>Perform an action, for example <a class="reference internal" href="ql/joins.html#joins"><span>In-query join of two collections</span></a></td>
+<tr class="row-even"><td><a class="reference internal" href="ql/ql.html#do"><span class="std std-ref">$do</span></a></td>
+<td>Perform an action, for example <a class="reference internal" href="ql/joins.html#joins"><span class="std std-ref">In-query join of two collections</span></a></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="ql/ql.html#icase"><span>$icase</span></a></td>
+<tr class="row-odd"><td><a class="reference internal" href="ql/ql.html#icase"><span class="std std-ref">$icase</span></a></td>
 <td>Case insensitive string matching</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="ql/ql.html#begin"><span>$begin</span></a></td>
+<tr class="row-even"><td><a class="reference internal" href="ql/ql.html#begin"><span class="std std-ref">$begin</span></a></td>
 <td>String prefix matching. Available collection indexes may be in use</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="ql/ql.html#strand"><span>$strand</span></a> , <a class="reference internal" href="ql/ql.html#stror"><span>$stror</span></a></td>
+<tr class="row-odd"><td><a class="reference internal" href="ql/ql.html#strand"><span class="std std-ref">$strand</span></a> , <a class="reference internal" href="ql/ql.html#stror"><span class="std std-ref">$stror</span></a></td>
 <td>String tokens/String array matches all/any token in specified array</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="ql/ql.html#addtosetall"><span>$addToSetAll</span></a> , <a class="reference internal" href="ql/ql.html#pullall"><span>$pullAll</span></a></td>
-<td>Batch versions of <a class="reference internal" href="ql/ql.html#addtoset"><span>$addToSet</span></a> , <a class="reference internal" href="ql/ql.html#pull"><span>$pull</span></a></td>
+<tr class="row-even"><td><a class="reference internal" href="ql/ql.html#addtosetall"><span class="std std-ref">$addToSetAll</span></a> , <a class="reference internal" href="ql/ql.html#pullall"><span class="std std-ref">$pullAll</span></a></td>
+<td>Batch versions of <a class="reference internal" href="ql/ql.html#addtoset"><span class="std std-ref">$addToSet</span></a> , <a class="reference internal" href="ql/ql.html#pull"><span class="std std-ref">$pull</span></a></td>
 </tr>
 </tbody>
 </table>
@@ -519,7 +519,7 @@ It may be hard to include this type of engine into embedded DB.</td>
         </div>
     </div>
     <div class="footer-copyright" role="contentinfo">
-        <div class="container">&copy; Copyright 2012-2015 Softmotions Ltd.
+        <div class="container">&copy; Copyright 2012-2017 Softmotions Ltd.
         </div>
     </div>
 </footer>

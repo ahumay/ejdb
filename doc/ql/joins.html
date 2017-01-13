@@ -116,7 +116,7 @@
 <li class="toctree-l2"><a class="reference internal" href="ql.html#glossary">Glossary</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">Collection joins</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Collection joins</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#simple-joins-showcase">Simple joins showcase</a></li>
 </ul>
 </li>
@@ -195,7 +195,7 @@
                 
   <div class="section" id="collection-joins">
 <span id="joins"></span><h1>Collection joins<a class="headerlink" href="#collection-joins" title="Permalink to this headline">¶</a></h1>
-<p>Joins can be specified in query within the <a class="reference internal" href="ql.html#do"><span>$do action directive</span></a>:</p>
+<p>Joins can be specified in query within the <a class="reference internal" href="ql.html#do"><span class="std std-ref">$do action directive</span></a>:</p>
 <p><code class="docutils literal"><span class="pre">{...,</span> <span class="pre">$do</span> <span class="pre">:</span> <span class="pre">{fieldpath1:</span> <span class="pre">{$join:</span> <span class="pre">collection1},</span> <span class="pre">fieldpath2</span> <span class="pre">:</span> <span class="pre">{$join:</span> <span class="pre">collection2}}</span> <span class="pre">}</span></code></p>
 <p>Here a value specified by <cite>fieldpath</cite> should point to <cite>OID`s</cite> of objects stored
 in the specific <cite>collection</cite>. Its value could be OID, string representation of OID, or an array of OIDs.
@@ -206,17 +206,17 @@ joined objects fetched from <cite>collection</cite>.</p>
 <p>This showcase based on trivial <cite>rent a car</cite> data model.</p>
 <div class="section" id="create-open-the-database">
 <h3>Create/open the database<a class="headerlink" href="#create-open-the-database" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-js"><div class="highlight"><pre>$ ~/tmp$ ejdb rentacar
+<div class="highlight-sh"><div class="highlight"><pre><span></span>$ ~/tmp$ ejdb rentacar
 Welcome to EJDB CLI v1.0.55
-ejdb&gt; db.open(&#39;rentacar&#39;)
-{ file: &#39;/home/adam/tmp/rentacar&#39;, collections: [] }
+ejdb&gt; db.open<span class="o">(</span><span class="s1">&#39;rentacar&#39;</span><span class="o">)</span>
+<span class="o">{</span> file: <span class="s1">&#39;/home/adam/tmp/rentacar&#39;</span>, collections: <span class="o">[]</span> <span class="o">}</span>
 ejdb&gt;
 </pre></div>
 </div>
 </div>
 <div class="section" id="save-our-cars-fleet">
 <h3>Save our cars fleet<a class="headerlink" href="#save-our-cars-fleet" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-js"><div class="highlight"><pre><span class="nx">ejdb</span><span class="o">&gt;</span> <span class="kd">var</span> <span class="nx">fleet</span> <span class="o">=</span> <span class="p">[</span>
+<div class="highlight-js"><div class="highlight"><pre><span></span><span class="nx">ejdb</span><span class="o">&gt;</span> <span class="kd">var</span> <span class="nx">fleet</span> <span class="o">=</span> <span class="p">[</span>
 <span class="p">...</span> <span class="p">{</span><span class="nx">model</span><span class="o">:</span><span class="s1">&#39;Honda Accord&#39;</span><span class="p">,</span> <span class="nx">year</span><span class="o">:</span><span class="mi">2005</span><span class="p">},</span>
 <span class="p">...</span> <span class="p">{</span><span class="nx">model</span><span class="o">:</span><span class="s1">&#39;Toyota Corolla&#39;</span><span class="p">,</span> <span class="nx">year</span><span class="o">:</span><span class="mi">2011</span><span class="p">},</span>
 <span class="p">...</span> <span class="p">{</span><span class="nx">model</span><span class="o">:</span><span class="s1">&#39;Toyota Camry&#39;</span><span class="p">,</span> <span class="nx">year</span><span class="o">:</span><span class="mi">2008</span><span class="p">}</span>
@@ -238,7 +238,7 @@ ejdb&gt;
 </div>
 <div class="section" id="then-register-a-rent-orders">
 <h3>Then register a rent orders<a class="headerlink" href="#then-register-a-rent-orders" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-js"><div class="highlight"><pre><span class="nx">ejdb</span><span class="o">&gt;</span> <span class="kd">var</span> <span class="nx">orders</span> <span class="o">=</span> <span class="p">[</span>
+<div class="highlight-js"><div class="highlight"><pre><span></span><span class="nx">ejdb</span><span class="o">&gt;</span> <span class="kd">var</span> <span class="nx">orders</span> <span class="o">=</span> <span class="p">[</span>
 <span class="p">...</span>  <span class="p">{</span><span class="nx">car</span><span class="o">:</span><span class="s1">&#39;50fe0a9935cf1e0300000000&#39;</span><span class="p">,</span> <span class="nx">pickUpDate</span><span class="o">:</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">(</span><span class="mi">2013</span><span class="p">,</span> <span class="mi">05</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">07</span><span class="p">),</span>
 <span class="p">...</span>   <span class="nx">returnDate</span><span class="o">:</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">(</span><span class="mi">2013</span><span class="p">,</span> <span class="mi">05</span><span class="p">,</span> <span class="mi">27</span><span class="p">,</span> <span class="mi">18</span><span class="p">),</span> <span class="nx">customer</span><span class="o">:</span> <span class="s1">&#39;andy&#39;</span><span class="p">},</span>
 <span class="p">...</span>  <span class="p">{</span><span class="nx">car</span><span class="o">:</span><span class="s1">&#39;50fe0a9935cf1e0300000002&#39;</span><span class="p">,</span> <span class="nx">pickUpDate</span><span class="o">:</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">(</span><span class="mi">2013</span><span class="p">,</span> <span class="mi">05</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">16</span><span class="p">),</span>
@@ -269,7 +269,7 @@ ejdb&gt;
 </div>
 <div class="section" id="find-all-rent-orders-with-joined-cars">
 <h3>Find all rent orders with joined cars<a class="headerlink" href="#find-all-rent-orders-with-joined-cars" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-js"><div class="highlight"><pre><span class="nx">ejdb</span><span class="o">&gt;</span> <span class="nx">db</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="s1">&#39;orders&#39;</span><span class="p">,</span> <span class="p">{</span><span class="nx">$do</span><span class="o">:</span> <span class="p">{</span><span class="nx">car</span><span class="o">:</span> <span class="p">{</span><span class="nx">$join</span><span class="o">:</span><span class="s1">&#39;cars&#39;</span><span class="p">}}});</span>
+<div class="highlight-js"><div class="highlight"><pre><span></span><span class="nx">ejdb</span><span class="o">&gt;</span> <span class="nx">db</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="s1">&#39;orders&#39;</span><span class="p">,</span> <span class="p">{</span><span class="nx">$do</span><span class="o">:</span> <span class="p">{</span><span class="nx">car</span><span class="o">:</span> <span class="p">{</span><span class="nx">$join</span><span class="o">:</span><span class="s1">&#39;cars&#39;</span><span class="p">}}});</span>
 <span class="nx">Found</span> <span class="mi">3</span> <span class="nx">records</span>
 <span class="p">{</span> <span class="nx">_id</span><span class="o">:</span> <span class="s1">&#39;50fe0f3735cf1e0300000003&#39;</span><span class="p">,</span>
   <span class="nx">car</span><span class="o">:</span>
@@ -300,7 +300,7 @@ ejdb&gt;
 </div>
 <div class="section" id="we-have-top-cars-monthly-rating">
 <h3>We have top cars monthly rating<a class="headerlink" href="#we-have-top-cars-monthly-rating" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-js"><div class="highlight"><pre><span class="nx">ejdb</span><span class="o">&gt;</span> <span class="kd">var</span> <span class="nx">topcars</span> <span class="o">=</span>
+<div class="highlight-js"><div class="highlight"><pre><span></span><span class="nx">ejdb</span><span class="o">&gt;</span> <span class="kd">var</span> <span class="nx">topcars</span> <span class="o">=</span>
            <span class="p">{</span><span class="nx">month</span><span class="o">:</span> <span class="s1">&#39;June&#39;</span><span class="p">,</span>
             <span class="nx">cars</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;50fe0a9935cf1e0300000002&#39;</span><span class="p">,</span>
                    <span class="s1">&#39;50fe0a9935cf1e0300000000&#39;</span><span class="p">]};</span>
@@ -316,7 +316,7 @@ ejdb&gt;
 </div>
 <div class="section" id="get-top-cars-june-rating-with-joined-array-field">
 <h3>Get top cars <strong>June</strong> rating with joined array field<a class="headerlink" href="#get-top-cars-june-rating-with-joined-array-field" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-js"><div class="highlight"><pre><span class="nx">ejdb</span><span class="o">&gt;</span> <span class="nx">db</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="s1">&#39;topcars&#39;</span><span class="p">,</span>
+<div class="highlight-js"><div class="highlight"><pre><span></span><span class="nx">ejdb</span><span class="o">&gt;</span> <span class="nx">db</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="s1">&#39;topcars&#39;</span><span class="p">,</span>
               <span class="p">{</span><span class="nx">month</span><span class="o">:</span> <span class="s1">&#39;June&#39;</span><span class="p">,</span>
                <span class="nx">$do</span><span class="o">:</span> <span class="p">{</span><span class="s1">&#39;cars&#39;</span><span class="o">:</span> <span class="p">{</span><span class="nx">$join</span><span class="o">:</span> <span class="s1">&#39;cars&#39;</span><span class="p">}}});</span>
 <span class="nx">Found</span> <span class="mi">1</span> <span class="nx">records</span>
@@ -385,7 +385,7 @@ ejdb&gt;
         </div>
     </div>
     <div class="footer-copyright" role="contentinfo">
-        <div class="container">&copy; Copyright 2012-2015 Softmotions Ltd.
+        <div class="container">&copy; Copyright 2012-2017 Softmotions Ltd.
         </div>
     </div>
 </footer>
