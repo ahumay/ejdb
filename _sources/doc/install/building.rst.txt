@@ -89,7 +89,8 @@ Install the required packages:
     libltdl-dev libssl-dev libxml-parser-perl make openssl   \
     p7zip-full patch perl pkg-config python ruby scons sed   \
     unzip wget xz-utils \
-    wine
+    wine libtool-bin libgdk-pixbuf2.0-dev
+
 
 .. code-block:: sh
 
@@ -109,7 +110,7 @@ Save the following content in  `settings.mk`:
 
     JOBS := 1
     MXE_TARGETS := x86_64-w64-mingw32.static i686-w64-mingw32.static
-    LOCAL_PKG_LIST := winpthreads pcre zlib lzo bzip2 cunit
+    LOCAL_PKG_LIST := pcre zlib lzo bzip2 cunit
     .DEFAULT local-pkg-list:
     local-pkg-list: $(LOCAL_PKG_LIST)
 
@@ -117,6 +118,7 @@ Build MXE packages:
 
 .. code-block:: sh
 
+     export PATH=/usr/bin:/bin
      cd <mxe checkout dir>
      make
 

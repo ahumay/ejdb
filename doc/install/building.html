@@ -275,7 +275,7 @@ gettext git g++ gperf intltool libffi-dev libtool   <span class="se">\</span>
 libltdl-dev libssl-dev libxml-parser-perl make openssl   <span class="se">\</span>
 p7zip-full patch perl pkg-config python ruby scons sed   <span class="se">\</span>
 unzip wget xz-utils <span class="se">\</span>
-wine
+wine libtool-bin libgdk-pixbuf2.0-dev
 </pre></div>
 </div>
 <div class="highlight-sh"><div class="highlight"><pre><span></span>git clone https://github.com/mxe/mxe.git
@@ -289,13 +289,14 @@ nano ./settings.mk
 <p>Save the following content in  <cite>settings.mk</cite>:</p>
 <div class="highlight-sh"><div class="highlight"><pre><span></span>JOBS :<span class="o">=</span> <span class="m">1</span>
 MXE_TARGETS :<span class="o">=</span> x86_64-w64-mingw32.static i686-w64-mingw32.static
-LOCAL_PKG_LIST :<span class="o">=</span> winpthreads pcre zlib lzo bzip2 cunit
+LOCAL_PKG_LIST :<span class="o">=</span> pcre zlib lzo bzip2 cunit
 .DEFAULT local-pkg-list:
 local-pkg-list: <span class="k">$(</span>LOCAL_PKG_LIST<span class="k">)</span>
 </pre></div>
 </div>
 <p>Build MXE packages:</p>
-<div class="highlight-sh"><div class="highlight"><pre><span></span><span class="nb">cd</span> &lt;mxe checkout dir&gt;
+<div class="highlight-sh"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span>/usr/bin:/bin
+<span class="nb">cd</span> &lt;mxe checkout dir&gt;
 make
 </pre></div>
 </div>
