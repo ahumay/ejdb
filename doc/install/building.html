@@ -9,6 +9,7 @@
     
 <link rel="stylesheet" href="../../_static/theme.css" type="text/css"/>
 <link rel="stylesheet" href="../../_static/pygments.css" type="text/css"/>
+    <link rel="search" title="Search" href="../../search.html"/>
     <link rel="top" title="EJDB" href="../../index.html"/>
     <link rel="up" title="Installation" href="index.html"/>
     <link rel="next" title="Command line interface" href="../cli.html"/>
@@ -72,6 +73,7 @@
 </div><div id="sidetoc">
     <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../news.html">Changelog</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../news.html#ejdb-v1-2-11-released">EJDB v1.2.11 released</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../news.html#ejdb-v1-2-10-released">EJDB v1.2.10 released</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../news.html#ejdb-v1-2-9-released">EJDB v1.2.9 released</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../news.html#ejdb-v1-2-8-released">EJDB v1.2.8 released</a></li>
@@ -285,7 +287,7 @@ nano ./settings.mk
 </pre></div>
 </div>
 <p>Save the following content in  <cite>settings.mk</cite>:</p>
-<div class="highlight-sh"><div class="highlight"><pre><span></span>JOBS :<span class="o">=</span> 1
+<div class="highlight-sh"><div class="highlight"><pre><span></span>JOBS :<span class="o">=</span> <span class="m">1</span>
 MXE_TARGETS :<span class="o">=</span> x86_64-w64-mingw32.static i686-w64-mingw32.static
 LOCAL_PKG_LIST :<span class="o">=</span> winpthreads pcre zlib lzo bzip2 cunit
 .DEFAULT local-pkg-list:

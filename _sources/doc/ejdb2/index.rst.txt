@@ -12,5 +12,5 @@ EJDB2 Roadmap
 Progress
 --------
 
-* Implemented the `file IO library and free space management engine (IOWOW) <https://github.com/Softmotions/iowow>`_
+`See #183 <https://github.com/Softmotions/ejdb/issues/183>`_
 

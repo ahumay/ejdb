@@ -23,8 +23,10 @@
 .highlight .s { color: #a31515 } /* Literal.String */
 .highlight .nc { color: #2b91af } /* Name.Class */
 .highlight .ow { color: #0000ff } /* Operator.Word */
+.highlight .sa { color: #a31515 } /* Literal.String.Affix */
 .highlight .sb { color: #a31515 } /* Literal.String.Backtick */
 .highlight .sc { color: #a31515 } /* Literal.String.Char */
+.highlight .dl { color: #a31515 } /* Literal.String.Delimiter */
 .highlight .sd { color: #a31515 } /* Literal.String.Doc */
 .highlight .s2 { color: #a31515 } /* Literal.String.Double */
 .highlight .se { color: #a31515 } /* Literal.String.Escape */

@@ -1,6 +1,15 @@
 Changelog
 =========
 
+EJDB v1.2.11 released
+---------------------
+2017-16-03
+
+**Changelog:**
+
+* EJDB_EXPORT for bson_free fixed `#160 <https://github.com/Softmotions/ejdb/issues/160>`_
+* Segmentation fault using $orderby `#182 <https://github.com/Softmotions/ejdb/issues/182>`_
+
 
 EJDB v1.2.10 released
 ---------------------
@@ -13,7 +22,7 @@ EJDB v1.2.10 released
 
 
 EJDB v1.2.9 released
----------------------
+--------------------
 2015-10-07
 
 **Changelog:**
